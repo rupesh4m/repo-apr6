@@ -1,6 +1,7 @@
 ---
 - hosts: mywebservers
-  beccome: yes
+  gathering_facts: yes
+  become: yes
   tasks:
   - name: i want to install java on ubuntu nodes
     apt: 
