@@ -1,6 +1,6 @@
 ---
 - hosts: all
- gather_facts: yes
+  gather_facts: yes
   tasks:
    - name: i want to install webserver on ansible on ubuntu nodes
      apt: 
