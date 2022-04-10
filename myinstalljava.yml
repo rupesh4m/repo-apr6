@@ -9,7 +9,7 @@
     when: ansible_os_family =="Debian"
 
   - name: install java on redhat ansible nodes
-      yum:
-       name: "{{mywebpackforredhat}}"
-       state: present
-      when: ansible_os_family =="RedHat"
+    yum:
+      name: "{{mywebpackforredhat}}"
+      state: present
+    when: ansible_os_family =="RedHat"
