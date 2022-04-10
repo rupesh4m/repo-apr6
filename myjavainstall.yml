@@ -4,13 +4,13 @@
   tasks:
 
   - name: i want to install java on ubuntu ansible nodes
-    apt: 
-      name: {{mywebpackforubuntu}}
+    apt:
+     name: "{{mywebpackforubuntu}}"
       state: present 
     when: ansible_os_family =="Debian"
 
-  - name:i want to install java on RedHat nodes
+  - name: i want to install java on RedHat nodes
     yum:
-      name: {{mywebpackforredhat}}
+      name: "{{mywebpackforredhat}}"
       state: present 
     when: ansible_os_family =="RedHat"
