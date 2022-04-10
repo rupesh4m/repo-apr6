@@ -21,5 +21,7 @@
 
 
 [mywebservers:vars]
+mywebpackforubuntu= apache2
+mywebpackforredhat= httpd
 mywebpackforubuntu= openjdk-8-jre
 mywebpackforredhat= java-1.8.0-openjdk
