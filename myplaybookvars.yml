@@ -9,6 +9,7 @@
   - name: i want to display myvar1
     debug:
       msg: "[{myvar1}}"
+      
   - name: i want to install git
     apt:
     name: "{{myvar1}}"
