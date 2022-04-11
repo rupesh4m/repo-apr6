@@ -1,15 +1,15 @@
 ---
 - hosts: mywebservers
   become: yes
-  taks:
+  tasks:
   - name: install java on ubuntu ansible nodes
     apt:
-     name: "{{openjdk-8-jre}}"
-     state: present
+      name: "{{myjavapackonubuntu}}"
+      state: present 
     when: ansible_os_family =="Debian"
 
   - name: install java on redhat ansible nodes
     yum:
-      name: "{{mywebpackforredhat}}"
-      state: present
+      name: "{{myjavapackonredhat}}"
+      state: present 
     when: ansible_os_family =="RedHat"
