@@ -4,7 +4,7 @@
   tasks:
   - name: install java on ubuntu ansible nodes
     apt:
-      name: "{{myjavapackonubuntu}}"
+      name: "{{mywebpackforubuntu}}"
       state: present 
     when: ansible_os_family =="Debian"
 
