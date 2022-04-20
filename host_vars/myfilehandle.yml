@@ -2,7 +2,9 @@
 - hosts: mywebservers
   become: yes
   tasks:
+  - include_tasks: myfile.yml
   - name: iwant to create file
-    file:
-      path: /home/ubuntu/mytestfile
-      state: touch 
+     apt:
+      path: apache2
+      state: touch
+      
