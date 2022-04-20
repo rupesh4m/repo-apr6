@@ -1,10 +1,21 @@
 ---
-- hosts: mywebservers
-  become: yes
-  tasks:
-  - include_tasks: myfile.yml
-  - name: iwant to create file
-     apt:
-      path: apache2
-      state: touch
-      
+-hosts: mywebservers
+become: yes
+tasks:
+- include_tasks: myfile.yml
+- name: i want to install webserver
+   apt:
+    name: apache2
+    state: present
+
+
+- name: i want copy file into ansible nodes
+  template:
+   src: myindex.j2
+   dest: /var/www/html/index.html
+
+handlers:
+- name: restart webserver
+  service:
+   name: apache2
+   state: restarted
