@@ -1,6 +1,7 @@
 
 [mywebservers]
 172.31.9.190
+172.31.9.225
 
 [myapplicatinservers]
 172.31.9 190
